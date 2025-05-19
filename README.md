@@ -26,6 +26,7 @@ This repo is under a slowly construction...
 -   [74. Search a 2D Matrix](https://github.com/gabaoalb/leet-code/blob/master/src/search_a_2d_matrix.rs)
 -   [125. Valid Palindrome](https://github.com/gabaoalb/leet-code/blob/master/src/valid_palindrome.rs)
 -   [128. Longest Consecutive Sequence](https://github.com/gabaoalb/leet-code/blob/master/src/longest_consecutive_sequence.rs)
+-   [153. Find Minimum in Rotated Sorted Array](https://github.com/gabaoalb/leet-code/blob/master/src/find_minimun_in_rotated_sorted_array.rs)
 -   [155. Min Stack](https://github.com/gabaoalb/leet-code/blob/master/src/min_stack.rs)
 -   [167. Two Sum II - Input Array Is Sorted](https://github.com/gabaoalb/leet-code/blob/master/src/two_sum_ii_input_array_is_sorted.rs)
 -   [217. Contains Duplicate](https://github.com/gabaoalb/leet-code/blob/master/src/contains_duplicate.rs)

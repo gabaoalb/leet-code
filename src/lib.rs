@@ -24,6 +24,7 @@ pub mod regular_expression_matching;
 pub mod reverse_integer;
 pub mod roman_to_integer;
 pub mod search_a_2d_matrix;
+pub mod search_in_rotated_sorted_array;
 pub mod string_to_integer;
 pub mod three_sum;
 pub mod three_sum_closest;
