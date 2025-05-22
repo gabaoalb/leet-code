@@ -22,6 +22,7 @@ This repo is under a slowly construction...
 -   [16. 3Sum Closest](https://github.com/gabaoalb/leet-code/blob/master/src/three_sum_closest.rs)
 -   [20. Valid Parentheses](https://github.com/gabaoalb/leet-code/blob/master/src/valid_parentheses.rs)
 -   [22. Generate Parentheses](https://github.com/gabaoalb/leet-code/blob/master/src/generate_parentheses.rs)
+-   [33. Search in Rotated Sorted Array](https://github.com/gabaoalb/leet-code/blob/master/src/search_in_rotated_sorted_array.rs)
 -   [49. Group Anagrams](https://github.com/gabaoalb/leet-code/blob/master/src/group_anagrams.rs)
 -   [74. Search a 2D Matrix](https://github.com/gabaoalb/leet-code/blob/master/src/search_a_2d_matrix.rs)
 -   [125. Valid Palindrome](https://github.com/gabaoalb/leet-code/blob/master/src/valid_palindrome.rs)

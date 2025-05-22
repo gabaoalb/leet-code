@@ -24,7 +24,7 @@ impl Solution {
     }
 
     // Approach 2 - Binary Search
-    pub fn find_min(mut nums: Vec<i32>) -> i32 {
+    pub fn find_min(nums: Vec<i32>) -> i32 {
         let (mut low, mut high) = (0, nums.len() - 1);
         let mut min = nums[low];
         

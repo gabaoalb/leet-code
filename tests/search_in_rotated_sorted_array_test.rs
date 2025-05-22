@@ -24,3 +24,23 @@ fn case_4() {
 fn case_7() {
     assert_eq!(Solution::search(vec![1, 3], 2), -1)
 }
+
+#[test]
+fn case_9() {
+    assert_eq!(Solution::search(vec![1, 3], 4), -1)
+}
+
+#[test]
+fn case_132() {
+    assert_eq!(Solution::search(vec![1, 3], 3), 1)
+}
+
+#[test]
+fn case_139() {
+    assert_eq!(Solution::search(vec![1, 3, 5], 1), 0)
+}
+
+#[test]
+fn case_150() {
+    assert_eq!(Solution::search(vec![1, 3, 5], 5), 2)
+}

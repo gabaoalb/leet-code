@@ -18,17 +18,23 @@ impl Solution {
                 return middle as i32;
             }
 
-            if nums[middle] >= nums[low] {
-                if nums[low] > target {
+            if nums[low] <= nums[middle] {
+                if target > nums[middle] || target < nums[low] {
                     low = middle + 1;
+                } else if let Some(opt_subtract) = middle.checked_sub(1) {
+                    high = opt_subtract;
                 } else {
-                    high = middle - 1;
+                    break;
                 }
             } else {
-                if nums[low] > target {
-                    low = middle + 1;
+                if target < nums[middle] || target > nums[high] {
+                    if let Some(opt_subtract) = middle.checked_sub(1) {
+                        high = opt_subtract;
+                    } else {
+                        break;
+                    }
                 } else {
-                    high = middle - 1;
+                    low = middle + 1;
                 }
             }
         }
