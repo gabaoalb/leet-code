@@ -129,4 +129,27 @@ impl Solution {
 
         0.0
     }
+
+    // Approach - Two Pointers
+    pub fn find_median_sorted_arrays_merge_sort(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
+        let (mut p1, mut p2, mut merged_vec) = (0, 0, Vec::new());
+
+        while merged_vec.len() < nums1.len() + nums2.len() {
+            if nums1.get(p1).unwrap_or(&i32::MAX) <= nums2.get(p2).unwrap_or(&i32::MAX) {
+                merged_vec.push(nums1[p1]);
+                p1 += 1;
+            } else {
+                merged_vec.push(nums2[p2]);
+                p2 += 1;
+            }
+        }
+
+        let mid = merged_vec.len() / 2;
+
+        if merged_vec.len() % 2 == 0 {
+            return (merged_vec[mid - 1] + merged_vec[mid]) as f64 / 2.0;
+        }
+
+        merged_vec[mid] as f64
+    }
 }
