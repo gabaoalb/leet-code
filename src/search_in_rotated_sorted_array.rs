@@ -4,7 +4,7 @@ impl Solution {
     // Approach 2 - Binary Search
     // Time Complexity: O(log n)
     // Space Complexity: O(1)
-    pub fn search(nums: Vec<i32>, target:i32) -> i32 {
+    pub fn search(nums: Vec<i32>, target: i32) -> i32 {
         if nums.len() == 1 {
             return if nums[0] == target { 0 } else { -1 };
         }

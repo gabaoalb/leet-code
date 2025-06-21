@@ -27,18 +27,18 @@ impl Solution {
     pub fn find_min(nums: Vec<i32>) -> i32 {
         let (mut low, mut high) = (0, nums.len() - 1);
         let mut min = nums[low];
-        
+
         while low <= high && high - low >= 1 {
             let middle = low + (high - low) / 2;
 
             min = cmp::min(min, nums[middle]);
-            
+
             if nums[middle] >= nums[low] {
                 low = middle + 1;
             } else {
                 high = middle - 1;
             }
-            
+
             min = cmp::min(min, nums[low]);
         }
 

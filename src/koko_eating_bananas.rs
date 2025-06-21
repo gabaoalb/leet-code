@@ -14,7 +14,7 @@ impl Solution {
             for &bananas in piles.iter() {
                 time += (bananas as i64 + middle as i64 - 1) / middle as i64;
             }
-            
+
             match time.cmp(&(h as i64)) {
                 Ordering::Greater => low = middle + 1,
                 _ => {
