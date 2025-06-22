@@ -28,6 +28,7 @@ pub mod search_in_rotated_sorted_array;
 pub mod string_to_integer;
 pub mod three_sum;
 pub mod three_sum_closest;
+pub mod time_based_key_value_store;
 pub mod top_k_frequent_elements;
 pub mod two_sum;
 pub mod two_sum_ii_input_array_is_sorted;
