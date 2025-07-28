@@ -1,4 +1,5 @@
 pub mod add_two_numbers;
+pub mod best_time_to_buy_and_sell_stock;
 pub mod binary_search;
 pub mod car_fleet;
 pub mod container_with_most_water;

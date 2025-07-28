@@ -25,6 +25,7 @@ This repo is under a slowly construction...
 -   [33. Search in Rotated Sorted Array](https://github.com/gabaoalb/leet-code/blob/master/src/search_in_rotated_sorted_array.rs)
 -   [49. Group Anagrams](https://github.com/gabaoalb/leet-code/blob/master/src/group_anagrams.rs)
 -   [74. Search a 2D Matrix](https://github.com/gabaoalb/leet-code/blob/master/src/search_a_2d_matrix.rs)
+-   [121.  Best Time to Buy and Sell Stock](https://github.com/gabaoalb/leet-code/blob/master/src/best_time_to_buy_and_sell_stock.rs)
 -   [125. Valid Palindrome](https://github.com/gabaoalb/leet-code/blob/master/src/valid_palindrome.rs)
 -   [128. Longest Consecutive Sequence](https://github.com/gabaoalb/leet-code/blob/master/src/longest_consecutive_sequence.rs)
 -   [153. Find Minimum in Rotated Sorted Array](https://github.com/gabaoalb/leet-code/blob/master/src/find_minimum_in_rotated_sorted_array.rs)
