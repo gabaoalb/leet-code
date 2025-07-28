@@ -14,6 +14,7 @@ impl Solution {
         max_profit
     }
 
+    // Approach 2 - Two Pointers
     pub fn max_profit_two_pointer(prices: Vec<i32>) -> i32 {
         let (mut left, mut right) = (0, 1);
         let mut max_profit = 0;
