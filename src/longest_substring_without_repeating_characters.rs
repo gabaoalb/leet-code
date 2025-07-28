@@ -1,39 +1,40 @@
-use std::cmp;
-use std::collections::HashSet;
+use std::cmp::max;
+use std::collections::{HashMap, HashSet};
 
 pub struct Solution;
 
 impl Solution {
-    pub fn length_of_longest_substring(s: String) -> i32 {
-        if s.is_empty() {
-            return 0;
-        }
-
+    // Approach 1 - Brute Force
+    pub fn length_of_longest_substring_brute_force(s: String) -> i32 {
         let mut biggest: i32 = 0;
-        let vec_char: Vec<char> = s.chars().collect();
-        let mut curr_hash = HashSet::new();
-        let mut i = 0;
-
-        while i < s.len() {
-            match curr_hash.get(&vec_char[i]) {
-                None => {
-                    curr_hash.insert(vec_char[i]);
+        for i in 0..s.len() {
+            let mut letters: HashSet<char> = HashSet::new();
+            for j in i..s.len() {
+                if letters.contains(&s.chars().nth(j).unwrap()) {
+                    break;
                 }
-                _ => {
-                    let index = vec_char[0..i]
-                        .iter()
-                        .rposition(|&r| r == vec_char[i])
-                        .unwrap_or(i - 1);
-
-                    i = index + 1;
-                    biggest = cmp::max(biggest, curr_hash.len() as i32);
-                    curr_hash = HashSet::new();
-                    curr_hash.insert(vec_char[i]);
-                }
+                letters.insert(s.chars().nth(j).unwrap());
             }
-            i += 1;
+            biggest = max(biggest, letters.len() as i32);
         }
 
-        cmp::max(biggest, curr_hash.len() as i32)
+        biggest
+    }
+
+    // Approach 2 - Sliding Window
+    pub fn length_of_longest_substring(s: String) -> i32 {
+        let mut left = 0;
+        let mut biggest: i32 = 0;
+        let mut letters: HashMap<char, i32> = HashMap::new();
+
+        for (right, curr_char) in s.chars().enumerate() {
+            if letters.contains_key(&curr_char) {
+                left = max(left, letters[&curr_char] + 1);
+            }
+            letters.insert(curr_char, right as i32);
+            biggest = max(biggest, right as i32 - left + 1);
+        }
+
+        biggest
     }
 }
