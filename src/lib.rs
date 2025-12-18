@@ -11,6 +11,7 @@ pub mod find_minimum_in_rotated_sorted_array;
 pub mod generate_parentheses;
 pub mod group_anagrams;
 pub mod integer_to_roman;
+pub mod invert_binary_tree;
 pub mod koko_eating_bananas;
 pub mod longest_common_prefix;
 pub mod longest_consecutive_sequence;

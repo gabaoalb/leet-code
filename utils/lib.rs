@@ -1,4 +1,5 @@
 pub mod listnode;
+pub mod tree_node;
 pub mod string_utils {
     pub fn remove_non_alphanumeric(s: &str) -> String {
         s.chars().filter(|c| c.is_alphanumeric()).collect()
@@ -9,4 +10,3 @@ pub mod string_utils {
         ($($x:expr),*) => (vec![$($x.to_string()),*]);
     }
 }
-
