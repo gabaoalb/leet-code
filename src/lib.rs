@@ -24,6 +24,7 @@ pub mod palindrome_number;
 pub mod product_of_array_except_self;
 pub mod regular_expression_matching;
 pub mod reverse_integer;
+pub mod reverse_linked_list;
 pub mod roman_to_integer;
 pub mod search_a_2d_matrix;
 pub mod search_in_rotated_sorted_array;

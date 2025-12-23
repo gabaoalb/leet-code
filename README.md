@@ -31,6 +31,7 @@ This repo is under a slowly construction...
 -   [153. Find Minimum in Rotated Sorted Array](https://github.com/gabaoalb/leet-code/blob/master/src/find_minimum_in_rotated_sorted_array.rs)
 -   [155. Min Stack](https://github.com/gabaoalb/leet-code/blob/master/src/min_stack.rs)
 -   [167. Two Sum II - Input Array Is Sorted](https://github.com/gabaoalb/leet-code/blob/master/src/two_sum_ii_input_array_is_sorted.rs)
+-   [206. Reverse Linked List](https://github.com/gabaoalb/leet-code/blob/master/src/reverse_linked_list.rs)
 -   [217. Contains Duplicate](https://github.com/gabaoalb/leet-code/blob/master/src/contains_duplicate.rs)
 -   [226. Invert Binary Tree](https://github.com/gabaoalb/leet-code/blob/master/src/invert_binary_tree.rs)
 -   [238. Product of Array Except Self](https://github.com/gabaoalb/leet-code/blob/master/src/product_of_array_except_self.rs)

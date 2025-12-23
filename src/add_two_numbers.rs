@@ -1,14 +1,14 @@
-use utils::listnode::{to_list, to_vector, ListNode};
+use utils::listnode::{LinkedListToVec, ListNode, VecToLinkedList};
 
 pub struct Solution;
 
 impl Solution {
     pub fn add_two_numbers(
-        l1: Option<Box<ListNode>>,
-        l2: Option<Box<ListNode>>,
-    ) -> Option<Box<ListNode>> {
-        let v1 = to_vector(&l1);
-        let v2 = to_vector(&l2);
+        l1: Option<Box<ListNode<i32>>>,
+        l2: Option<Box<ListNode<i32>>>,
+    ) -> Option<Box<ListNode<i32>>> {
+        let v1 = l1.to_vector();
+        let v2 = l2.to_vector();
 
         let mut carry = 0;
         let mut vec_result: Vec<i32> = vec![];
@@ -23,6 +23,6 @@ impl Solution {
             }
         };
 
-        to_list(vec_result)
+        vec_result.to_linked_list()
     }
 }

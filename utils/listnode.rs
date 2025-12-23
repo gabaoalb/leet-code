@@ -1,16 +1,16 @@
 #[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
+pub struct ListNode<T> {
+    pub val: T,
+    pub next: Option<Box<ListNode<T>>>,
 }
 
-impl ListNode {
+impl<T> ListNode<T> {
     #[inline]
-    pub fn new(val: i32) -> Self {
+    pub fn new(val: T) -> Self {
         ListNode { next: None, val }
     }
-    
-    pub fn append(&mut self, elem: i32) {
+
+    pub fn append(&mut self, elem: T) {
         match self.next {
             Option::Some(ref mut next_address) => {
                 next_address.append(elem);
@@ -26,28 +26,42 @@ impl ListNode {
     }
 }
 
-pub fn to_list(vector: Vec<i32>) -> Option<Box<ListNode>> {
-    let mut curr = None;
-    for &value in vector.iter().rev() {
-        let mut new_node = ListNode::new(value);
-        new_node.next = curr;
-        curr = Some(Box::new(new_node));
-    }
-    curr
+pub trait LinkedListToVec<T> {
+    fn to_vector(self) -> Vec<T>;
 }
 
-pub fn to_vector(list: &Option<Box<ListNode>>) -> Vec<i32> {
-    let mut curr = list.as_ref().unwrap().as_ref();
-    let mut vector: Vec<i32> = vec![];
-    vector = loop {
-        vector.push(curr.val);
-        let option_next = curr.next.as_ref();
-        if option_next != None {
-            curr = option_next.unwrap().as_ref();
-        } else {
-            break vector;
-        }
-    };
+impl<T> LinkedListToVec<T> for Option<Box<ListNode<T>>>
+where
+    T: Copy,
+{
+    fn to_vector(self) -> Vec<T> {
+        let mut curr = self.as_ref().unwrap().as_ref();
+        let mut vector: Vec<T> = vec![];
 
-    vector
+        loop {
+            vector.push(curr.val);
+            match curr.next.as_ref() {
+                Some(next) => curr = next.as_ref(),
+                None => break,
+            }
+        }
+
+        vector
+    }
+}
+
+pub trait VecToLinkedList<T> {
+    fn to_linked_list(self) -> Option<Box<ListNode<T>>>;
+}
+
+impl<T> VecToLinkedList<T> for Vec<T> {
+    fn to_linked_list(self) -> Option<Box<ListNode<T>>> {
+        let mut curr = None;
+        for value in self.into_iter().rev() {
+            let mut new_node = ListNode::new(value);
+            new_node.next = curr;
+            curr = Some(Box::new(new_node));
+        }
+        curr
+    }
 }
