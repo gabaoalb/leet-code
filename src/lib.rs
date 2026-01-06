@@ -22,6 +22,7 @@ pub mod longest_substring_without_repeating_characters;
 pub mod median_of_two_sorted_arrays;
 pub mod min_stack;
 pub mod palindrome_number;
+pub mod permutation_in_string;
 pub mod product_of_array_except_self;
 pub mod regular_expression_matching;
 pub mod reverse_integer;
