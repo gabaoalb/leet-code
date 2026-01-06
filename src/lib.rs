@@ -16,6 +16,7 @@ pub mod koko_eating_bananas;
 pub mod longest_common_prefix;
 pub mod longest_consecutive_sequence;
 pub mod longest_palindromic_substring;
+pub mod longest_repeating_character_replacement;
 pub mod longest_substring;
 pub mod longest_substring_without_repeating_characters;
 pub mod median_of_two_sorted_arrays;

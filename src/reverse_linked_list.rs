@@ -24,4 +24,25 @@ impl Solution {
 
         prev
     }
+
+    pub fn reverse_list_recursive(head: Option<Box<ListNode<i32>>>) -> Option<Box<ListNode<i32>>> {
+        fn helper(
+            node: Option<Box<ListNode<i32>>>,
+            prev: Option<Box<ListNode<i32>>>,
+        ) -> Option<Box<ListNode<i32>>> {
+            match node {
+                None => prev,
+                Some(mut current_node) => {
+                    let next_temp = current_node.next.take();
+                    current_node.next = prev;
+                    helper(next_temp, Some(current_node))
+                } // Some(mut current_node) => helper(
+                  //     std::mem::replace(&mut current_node.next, prev), // posso usar um mem::replace aqui para trocar os valores
+                  //     Some(current_node),
+                  // ),
+            }
+        }
+
+        helper(head, None)
+    }
 }
