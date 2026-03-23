@@ -28,8 +28,8 @@ impl Solution {
             node.borrow_mut().left = node.borrow_mut().right.clone();
             node.borrow_mut().right = temp;
 
-            Solution::invert_tree(node.borrow_mut().left.take());
-            Solution::invert_tree(node.borrow_mut().right.take());
+            Solution::invert_tree_n_fun(node.borrow_mut().left.take());
+            Solution::invert_tree_n_fun(node.borrow_mut().right.take());
 
             return Some(node);
         }

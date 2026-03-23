@@ -16,4 +16,9 @@ impl Solution {
 
         false
     }
+
+    pub fn contains_duplicate_hashset_length(nums: Vec<i32>) -> bool {
+        let counts: HashSet<i32> = nums.iter().cloned().collect();
+        counts.len() != nums.len()
+    }
 }

@@ -19,6 +19,7 @@ pub mod longest_palindromic_substring;
 pub mod longest_repeating_character_replacement;
 pub mod longest_substring;
 pub mod longest_substring_without_repeating_characters;
+pub mod maximum_depth_of_binary_tree;
 pub mod median_of_two_sorted_arrays;
 pub mod min_stack;
 pub mod palindrome_number;
