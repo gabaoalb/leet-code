@@ -5,6 +5,7 @@ pub mod car_fleet;
 pub mod container_with_most_water;
 pub mod contains_duplicate;
 pub mod daily_temperatures;
+pub mod diameter_of_binary_tree;
 pub mod encode_and_decode_strings;
 pub mod evaluate_reverse_polish_notation;
 pub mod find_minimum_in_rotated_sorted_array;
