@@ -1,5 +1,5 @@
 use leet_code::add_two_numbers::Solution;
-use utils::listnode::{ListNode, VecToLinkedList};
+use utils::listnode::VecToLinkedList;
 
 #[test]
 //#[ignore]
